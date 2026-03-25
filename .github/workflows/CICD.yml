@@ -28,11 +28,11 @@ jobs:
       - name: Install Databricks CLI
         uses: databricks/setup-cli@main
 
-      - name: Who is logged?
-        run: databricks current-user me
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+     #- name: Who is logged?
+     #   run: databricks current-user me
+     #   env:
+     #    DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+     #    DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
 
       - name: Validate bundle
         run: databricks bundle validate --target dev
